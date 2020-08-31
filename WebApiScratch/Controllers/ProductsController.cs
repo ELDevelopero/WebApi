@@ -39,37 +39,58 @@ namespace WebApiScratch.Controllers
 
         [HttpGet] //Get All Products
 
-        public IEnumerable<Product> Get()
+        public ActionResult<IEnumerable<Product>> Get()
         {
             return products;
         }
 
         [HttpGet("{id}")] //Get a specific Product
-        public Product Get(int id)
+        public ActionResult<Product> Get(int id)
         {
             var product = products.Find(product => product.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
             return product;
         }
 
         [HttpPost] //Add New Product
-         public void Post([FromBody] Product product)
+        public ActionResult Post([FromBody] Product product)
         {
+            if (products.Exists(prop => prop.Id == product.Id))
+            {
+                return Conflict();
+
+            }
+        
             products.Add(product);
+            return CreatedAtAction(nameof(Get), new { id = product.Id }, products);
         }
 
         [HttpDelete("{id}")] //Delete Product
-        public void Delete(int id)
+        public ActionResult<IEnumerable<Product>> Delete(int id)
         {
             var product = products.Where(p => p.Id == id);
+            if (product == null)
+            {
+                return NotFound();
+            }
             products = products.Except(product).ToList();
+            return products;
         }
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Product product)
+        [HttpPut("{id}")] //UpdateProduct
+        public ActionResult<IEnumerable<Product>> Put(int id, [FromBody] Product product)
         {
+            if (id != product.Id)
+            {
+                return BadRequest();
+            }
             var existingProduct = products.Where(p => p.Id == id);
             products = products.Except(existingProduct).ToList();
             products.Add(product);
+            return products;
         }
     }
 }
