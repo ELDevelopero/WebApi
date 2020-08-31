@@ -12,7 +12,7 @@ namespace WebApiScratch.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        List<Product> products = new List<Product>()
+        private static List<Product> products = new List<Product>()
         {
             new Product
             {
@@ -49,6 +49,27 @@ namespace WebApiScratch.Controllers
         {
             var product = products.Find(product => product.Id == id);
             return product;
+        }
+
+        [HttpPost] //Add New Product
+         public void Post([FromBody] Product product)
+        {
+            products.Add(product);
+        }
+
+        [HttpDelete("{id}")] //Delete Product
+        public void Delete(int id)
+        {
+            var product = products.Where(p => p.Id == id);
+            products = products.Except(product).ToList();
+        }
+
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] Product product)
+        {
+            var existingProduct = products.Where(p => p.Id == id);
+            products = products.Except(existingProduct).ToList();
+            products.Add(product);
         }
     }
 }
