@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AwFBFj8Ho7zPfAxQCsLpbxFYT//1HfqALzispE3Tl5kdFlp7NWxMOOjh2WGHRaKNswlgPkJHSbdUF4YTSeDl+Q==",
+  "dgSpecHash": "epMeZVZWVuZoDDxYwOtPBCfoPO5Y2MFh6iXSpCR94LEvDPzLs5wuUcBdE/zRQsXvet8wJ0Ofuwc1ZuvCeyvW8A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\samot\\source\\repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\WebApiWithIdentity.csproj",
+  "projectFilePath": "C:\\Users\\samot\\Source\\Repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\WebApiWithIdentity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\samot\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.7\\microsoft.aspnetcore.authentication.jwtbearer.3.1.7.nupkg.sha512",
     "C:\\Users\\samot\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

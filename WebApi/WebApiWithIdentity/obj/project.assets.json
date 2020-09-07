@@ -5739,11 +5739,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samot\\source\\repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\WebApiWithIdentity.csproj",
+      "projectUniqueName": "C:\\Users\\samot\\Source\\Repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\WebApiWithIdentity.csproj",
       "projectName": "WebApiWithIdentity",
-      "projectPath": "C:\\Users\\samot\\source\\repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\WebApiWithIdentity.csproj",
+      "projectPath": "C:\\Users\\samot\\Source\\Repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\WebApiWithIdentity.csproj",
       "packagesPath": "C:\\Users\\samot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samot\\source\\repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\obj\\",
+      "outputPath": "C:\\Users\\samot\\Source\\Repos\\ELDevelopero\\WebApi\\WebApi\\WebApiWithIdentity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\samot\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5807,7 +5807,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
